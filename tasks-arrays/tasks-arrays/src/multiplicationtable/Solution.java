@@ -17,22 +17,26 @@ package multiplicationtable;
 •	Выведенные числа должны быть таблицей умножения.
 */
 
+import java.util.Arrays;
+
 public class Solution {
 
-    public static int[][] MULTIPLICATION_TABLE;
-
     public static void main(String[] args) {
-        MULTIPLICATION_TABLE = new int[10][10];
-        for (int i = 1; i < MULTIPLICATION_TABLE.length; i++) {
-            for (int j = 1; j < MULTIPLICATION_TABLE[i].length; j++) {
-                int number = MULTIPLICATION_TABLE[i * j][i * j];
-                
-            }
+        int[][] board = new int[10][10];
+        for (int i = 1; i <= board.length; i++) {
+            for (int j = 1; j <= board.length; j++) {
+                board[i - 1][j - 1] = i * j; }
         }
-        for (int i = 1; i < MULTIPLICATION_TABLE.length; i++) {
-            for (int j = 1; j < MULTIPLICATION_TABLE.length; j++) {
-                System.out.print(MULTIPLICATION_TABLE[i][j]);
+        for (int[] a : board) {
+            for (int i : a) {
+                System.out.print(i + "\t");
             }
+            System.out.println("\n");
+        }
+        //print with Arrays.toString
+        for (int i = 0; i < board.length; i++) {
+            String str = Arrays.toString(board[i]);
+            System.out.println(str);
         }
 
         }
