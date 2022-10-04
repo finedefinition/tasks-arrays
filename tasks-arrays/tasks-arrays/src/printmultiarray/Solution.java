@@ -10,6 +10,8 @@ multiArray типа int[][][].
 •	В методе main(String[]) выведи на экран все числа из multiArray.
 */
 
+import java.util.Arrays;
+
 public class Solution {
 
     public static int[][][] multiArray = new int[][][]{{{4, 8, 15}, {16}},
@@ -20,10 +22,11 @@ public class Solution {
         for (int i = 0; i < multiArray.length; i++) {
             for (int j = 0; j < multiArray[i].length; j++) {
                 for (int k = 0; k < multiArray[i][j].length; k++) {
-                    System.out.print(multiArray[i][j][k] + " "); }
+                    System.out.print(multiArray[i][j][k] + " ");
                 }
+            }
             System.out.println();
-                }
+        }
         //another solution with separator line
         for (int i = 0; i < multiArray.length; i++) {
             for (int j = 0; j < multiArray[i].length; j++) {
@@ -34,5 +37,12 @@ public class Solution {
             }
             System.out.println("----------");
         }
+        for (int i = 0; i < multiArray.length; i++) {
+            for (int j = 0; j < multiArray[i].length; j++) {
+                String str = Arrays.toString(multiArray[i][j]);
+                System.out.println(str);
             }
+            System.out.println();
         }
+    }
+}
