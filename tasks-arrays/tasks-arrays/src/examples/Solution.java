@@ -1,32 +1,25 @@
 package examples;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Solution {
-    public static void main(String[] args) {
-       /* //turn back array
-        Scanner console = new Scanner(System.in);
-        int[] array = new int[10];
-        for (int i = 0; i < 10; i++) {
-            array[i] = console.nextInt();
-        }
-        for (int i = 9; i >= 0; i--) {
-            System.out.print(array[i]+ ", ");
-        }
 
-        */
-        // using for loop
-        int[][] board = new int[10][10];
-        for (int i = 1; i <= board.length; i++) {
-            for (int j = 1; j <= board.length; j++) {
-                board[i - 1][j - 1] = i * j; }
-        }
-        // now let's print a two dimensional array in Java
-        for (int[] a : board) {
-            for (int i : a) {
-                System.out.print(i + "\t");
-            }
-            System.out.println("\n");
-        }
-   }
+    public static String[] strings = new String[]{"I", "love", "Java"};
+    public static int[] ints = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+    public static String[][] strings2 = new String[][]{{"🙂", "🙂", "🙂", "🙂"}, {"🙃", "🙃", "🙃", "🙃"}, {"😋", "😋", "😋", "😋"}, {"😎", "😎", "😎", "😎"}};
+    public static int[][] ints2 = new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
+
+    public static void main(String[] args) {
+        //напишите тут ваш код
+        String str = Arrays.toString(strings);
+        String i = Arrays.toString(ints);
+        System.out.println(str);
+        System.out.println(i);
+
+        String str2 = Arrays.deepToString(strings2);
+        String i2 = Arrays.deepToString(ints2);
+        System.out.println(str2);
+        System.out.println(i2);
+
+    }
 }
