@@ -1,7 +1,8 @@
-package sortbubblesort;
+package sorttype.sortbubblesort;
 
 import java.util.Arrays;
-// Сортировка пузырьком
+// Сортировка пузырьком - проходим весь массив каждый раз
+//Сложность O(n^2)
 public class Solution {
     public static void main(String[] args) {
         int[] array = {10, 2, 10, 3, 1, 2, 5};

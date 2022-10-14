@@ -1,7 +1,9 @@
-package sortselectionsort;
+package sorttype.sortselectionsort;
 
 import java.util.Arrays;
-
+// Сортировка выбором - проходим массив, выбираем
+// минимальное значение и сдвигаем каждый следующий проход вправо
+//Сложность O(n^2)
 public class Solution {
     public static void main(String[] args) {
         int[] array = {10, 2, 10, 3, 1, 2, 5};
